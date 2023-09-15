@@ -1,0 +1,158 @@
+/*Tyler Lovegren 12/04/2022*/
+*
+    {   
+        box-sizing: border-box;
+    }
+#wrapper
+    {
+        margin: auto;
+        background-color: rgb(227, 231, 231);
+        width: 80%;
+        padding: 1em;
+        
+    }
+body
+    {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: gray;
+    }
+main
+    {
+        padding: 1px 20px 20px 30px;
+        display: block;
+        background-color: #b9b6b6;
+        overflow: auto;
+    }
+header 
+    {
+        background-color: rgb(34, 34, 34);
+        color: #FFFFFF;
+        text-align: center;
+    }
+footer
+    {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 90%;
+        text-align: center;
+        padding: 1em;
+        background-color: #b9b6b6;
+    }
+nav ul
+    {
+        list-style-type: none;
+        margin: 0;
+        padding-left: 1.2em;
+    }
+a   {
+    text-decoration: none;
+    }
+nav a:link 
+    {
+        color: #232623;
+        padding: .1em;
+    }
+nav a:visited
+    {
+        color: #af001d;
+    }
+nav a:hover
+    {
+        color: #A52A2A;
+        background-color: white;
+    }
+header a 
+    {
+        text-decoration: none;
+    }
+header a:link
+    {
+        color: #FFFFFF;    
+    }
+header a:visited
+    {
+        color: #FFFFFF;    
+    } 
+header a:hover
+    {
+        color: #90C3E3;    
+    }
+nav li
+    {
+        border-bottom: 1px solid lightgray;
+    }
+
+
+@media (min-width: 600px)
+    {
+        nav ul 
+            {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-around;
+                padding-bottom: 1em;
+            }
+        nav li 
+            {
+                border-bottom: none;
+            }
+        
+    }
+@media (min-width: 1024px)
+    {
+        #wrapper
+            {
+                margin: auto;
+                width: 80%;
+                border: 1px solid black;
+                box-shadow: 3px 3px black;
+            }
+        nav 
+            {
+                text-align: left;
+                padding-left: 1em;
+                background-color: lightgrey;
+            }
+        nav a 
+            {
+                padding: 0;
+                
+            }
+        
+        @supports (display: grid)
+            {
+                nav ul
+                    {
+                        flex-direction: column;
+                        padding-top: 1em;
+                    }
+                header
+                    {
+                        grid-area: header;
+                    }
+                nav 
+                    {
+                        grid-area: nav;
+                    }
+                .front
+                    {
+                        grid-area: front;
+                    }
+                main 
+                    {
+                        grid-area: main;
+                    }
+                footer 
+                    {
+                        grid-area: footer;
+                    }
+                #wrapper
+                    {
+                        display: grid;
+                        grid-template: "header header" 
+                                       "nav main"
+                                       "nav main"
+                                       "nav footer"
+                                       / 180px 1fr;
+                    }
+            }
+    }
