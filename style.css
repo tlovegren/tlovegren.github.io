@@ -1,4 +1,3 @@
-/*Tyler Lovegren 12/04/2022*/
 *
     {   
         box-sizing: border-box;
@@ -80,7 +79,34 @@ nav li
     {
         border-bottom: 1px solid lightgray;
     }
-
+.item 
+    {
+        padding: 10px;
+        background-color: #f0f0f0;
+        margin: 5px;
+        cursor: pointer;
+    } 
+.item:hover 
+    {
+        background-color: #ccc;
+    }
+.container 
+    {
+        width: 400px;
+        height: 200px;
+        border: 1px solid #ccc;
+        position: relative;
+        overflow: hidden;
+    }
+    
+#animatedText 
+    {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+        transition: left 1s ease-in-out;
+    }
 
 @media (min-width: 600px)
     {
