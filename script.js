@@ -29,3 +29,26 @@ $(document).ready(function() {
         isOnLeft = !isOnLeft; 
     });
 });
+
+$(document).ready(function() {
+    var currentImage = 0;
+    var totalImages = $('.slideshow-image').length;
+
+
+    $('.slideshow-image:first').show();
+
+    function displayImage() {
+        $('.slideshow-image').hide();
+        $('.slideshow-image:eq(' + currentImage + ')').fadeIn();
+    }
+
+    $('#nextButton').click(function() {
+        currentImage = (currentImage + 1) % totalImages;
+        displayImage();
+    });
+
+    $('#prevButton').click(function() {
+        currentImage = (currentImage - 1 + totalImages) % totalImages;
+        displayImage();
+    });
+});
