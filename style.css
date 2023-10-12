@@ -107,7 +107,22 @@ nav li
         transform: translate(0, -50%);
         transition: left 1s ease-in-out;
     }
-
+.slideshow-container 
+    {
+        position: relative;
+        max-width: 500px;
+        margin: 0 auto;
+        overflow: hidden;
+    } 
+.slideshow-image 
+    {
+        width: 100%;
+        display: none;
+    }   
+button 
+    {
+        margin: 10px;
+    }
 @media (min-width: 600px)
     {
         nav ul 
